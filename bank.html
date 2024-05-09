@@ -13,20 +13,53 @@
       </h2>
     </header>
     <main>
-      <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto">
-        <div class="bg-yellow-500 p-5 text-3xl rounded text-white">
-          <h2>Deposit</h2>
-          <h2>$ <span id="deposit-balance">00</span></h2>
+      <section>
+        <div class="grid grid-cols-3 gap-3 w-3/4 mx-auto">
+          <div class="bg-yellow-500 p-5 text-3xl rounded text-white">
+            <h2>Deposit</h2>
+            <h2>$ <span id="deposit-balance">00</span></h2>
+          </div>
+          <div class="bg-red-600 p-5 text-3xl rounded text-white">
+            <h2>Withdraw</h2>
+            <h2>$ <span id="withdraw-balance">00</span></h2>
+          </div>
+          <div class="bg-blue-500 p-5 text-3xl rounded text-white">
+            <h2>Deposit</h2>
+            <h2>$ <span id="total-balance">1200</span></h2>
+          </div>
         </div>
-        <div class="bg-red-600 p-5 text-3xl rounded text-white">
-          <h2>Withdraw</h2>
-          <h2>$ <span id="withdraw-balance">00</span></h2>
+      </section>
+      <!-- deposit and withdraw section -->
+      <section>
+        <div class="grid grid-cols-2 gap-3 w-3/4 mx-auto mt-5">
+          <div class="bg-blue-600 p-5">
+            <h2 class="text-4xl text-white">Your Deposit</h2>
+            <input
+              class="my-4 w-3/4 p-2 rounded"
+              type="text"
+              placeholder="$ Amount you want to deposit"
+            />
+            <button
+              class="text-3xl bg-sky-600 hover:bg-sky-500 p-2 rounded-xl text-white"
+            >
+              Deposit
+            </button>
+          </div>
+          <div class="bg-yellow-600 p-5">
+            <h2 class="text-5xl text-white">Your Deposit</h2>
+            <input
+              class="my-4 w-3/4 p-2 rounded"
+              type="text"
+              placeholder="$ Amount you want to withdraw"
+            />
+            <button
+              class="text-3xl bg-sky-600 hover:bg-sky-500 p-2 rounded-xl text-white"
+            >
+              Withdraw
+            </button>
+          </div>
         </div>
-        <div class="bg-blue-500 p-5 text-3xl rounded text-white">
-          <h2>Deposit</h2>
-          <h2>$ <span id="total-balance">1200</span></h2>
-        </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>
