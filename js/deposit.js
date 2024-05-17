@@ -1,28 +1,19 @@
 document.getElementById("deposit-btn").addEventListener("click", () => {
-  // const newDepositInput = document.getElementById("deposit-input");
-  // const newDepositString = newDepositInput.value;
   const newDeposit = getInputElementById("deposit-input");
-  // newDepositInput.value = "";
+  console.log(newDeposit);
+
   if (isNaN(newDeposit)) {
     alert("provide relevant number");
     return;
   }
-  //   addDeposit
 
-  const previousDepositBalanceField =
-    document.getElementById("deposit-balance");
-  const previousDepositBalanceString = previousDepositBalanceField.innerText;
-  const previousDepositBalance = parseFloat(previousDepositBalanceString);
+  const previousDepositBalance = getTexElement("deposit-balance");
+  console.log(previousDepositBalance);
   const newDepositBalance = previousDepositBalance + newDeposit;
+  setTextElement("deposit-balance", newDepositBalance);
 
-  previousDepositBalanceField.innerText = newDepositBalance;
-
-  // add TotalBalance
-  const previousTotalBalanceField = document.getElementById("total-balance");
-  const previousTotalBalanceString = previousTotalBalanceField.innerText;
-  const previousTotalBalance = parseFloat(previousTotalBalanceString);
+  const previousTotalBalance = getTexElement("total-balance");
   const newTotalBalance = newDeposit + previousTotalBalance;
-  previousTotalBalanceField.innerText = newTotalBalance;
 
-  newDepositInput.value = "";
+  setTextElement("total-balance", newTotalBalance);
 });

@@ -11,5 +11,11 @@ const getTexElement = (elementId) => {
   const elementField = document.getElementById(elementId);
   const elementFieldString = elementField.innerText;
   const elementFieldValue = parseFloat(elementFieldString);
+
   return elementFieldValue;
+};
+
+const setTextElement = (elementId, newValue) => {
+  const textValue = document.getElementById(elementId);
+  textValue.innerText = newValue;
 };
